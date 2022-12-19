@@ -16,6 +16,81 @@
        </script> 
     </head>
     <body> 
+        <form action="www.com" method="post">
+            <fieldset> <!-- fieldset se agrupa todos los campos del formulario en un bloque. la etiqueta legend nombrara el conjunto de los campos. Usaremos label para etiquetar los nombres de cada elemento.
+            Cuando hacemos un input es necesario especificar el tipo de dato que vamos a utilizar. el ID es diferente para cada elemento pero mantenemos el nombre para cada tipo de elemento, en caso de que sea una lista -->
+                <legend> Campos personales </legend>
+            <div>
+            <label for="userName">User Name</label>
+            <input 
+                type="text" 
+                name="userName" 
+                id="userName" 
+                placeholder="Escriba su nombre"
+                required
+                autocomplete="off"/>
+            </div>
+            <div>
+            <label for="cantidad">Numero</label>
+            <input 
+                type="number"
+                id=" cantidad"
+                name="cantidad"
+                min="1" max="50" />
+            </div>
+            <div>
+                <label for="tlf">Telefono</label>
+                <input 
+                    type="tel"
+                    id="tlf"
+                    name="tlf"
+                    pattern="[0-9]{9}"
+                    autocomplete="off">  
+                    <!-- patterns marcas la longitud del numero {} y los numeros que se pueden introducir [] -->
+            </div>
+            <div>
+                <label for="pass">Password</label>
+                <input type="password" id="pass" name="password">
+            </div>
+            <div>
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email">
+            </div>
+            <div>
+                <label for="paises">Elige un pais</label>
+                <select name="paises" id="paises"> <!-- En el desplegable hay que utilizar la opcion option para poder poner los diferentes valores de la listsa. -->
+                    <option value="spain">España</option>
+                    <option value="arg">Argentina</option>
+                    <option value="col">Colombia</option>
+                </select>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Pokemon</legend>
+            <div> <!-- hay que poner utilizar la iocion value como valor que se envie en el formulario, después es necesario laber para que aparezca el nombre en pantalla tanto con "checkbox" como "radio" -->
+            <input type="checkbox" name="pokemon" id="pokemon1" value="charmander">
+            <label for="pokemon1"> charmander</label>
+            </div>
+            <div>
+            <input type="checkbox" name="pokemon" id="pokemon2" value="pikachu">
+            <label for="pokemon2"> Pikachu</label>
+            </div>
+            <div>
+            <input type="checkbox" name="pokemon" id="pokemon3" value="bulbasur">
+            <label for="pokemon3"> bulbasur</label>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>vehiculo</legend>
+            <input type="radio" id="bici" name="vehiculo" value="bici">
+            <label for="bici">bicicleta</label>
+            <input type="radio" id="coche" name="vehiculo" value="coche" >
+            <label for="cohe">coche</label>
+            <input type="radio" name="vehiculo" id="moto" value="moto">
+            <label for="moto">motocicleta</label>
+        </fieldset>
+            <button submit> enviar</button>
+        </form>
         <h1 title="Encabezado principal de mi web">Encabezado H1</h1>
         <p>Lorem <i>ipsum</i> dolor sit, <em>amet</em> consectetur adipisicing elit.<br>
         Facilis, nam vitae voluptatum culpa, nulla, <b>exercitationem</b> incidunt rerum <strong>doloribus</strong> repellat <mark>dolorem</mark> totam obcaecati <del>excepturi</del> voluptatibus <sup>!</sup> Maiores <sub>rem</sub>  atque quasi?</p>
@@ -40,6 +115,59 @@
         <a href="https://wa.me/+34666666?text=Hola, es un whatsapp" target="_blank" rel="noopener noreferrer"> Enviar un whatsapp</a>
         <form action=""></form>
 
-        
+        <h2> coches</h2>
+    <ol  type="A" start="b"> <!-- type puedes modificar la viñeta con que se ordenen la lista nº, nº romanos, letras etc  y start especificas desde donde quieres empezar a contar. Ol el tipo de lista este caso ordenada UL desordenada. Li para cada elemento de la lista --> 
+        <li>fiat</li>
+        <li>seat</li>
+            <ol>  <!-- haces una sublista volviendo aplicar ol -->
+                <li>ibiza</li>
+                <li>leon</li>
+            </ol>
+            <ul>
+                <li>
+                    tarraco
+                </li>
+            </ul>
+            
+        <li>hyundai</li>
+    </ol>
+    <hr>
+    <h2>bebidas</h2>
+    <ul style="list-style: square;">
+        <li>agua</li>
+        <li>refrescos </li>
+        <li>vino</li>
+    </ul>
+
+      <table>
+        <tr>
+            <th colspan="2"> <b>fruta</b> </th> <!-- tr es una linea nueva de la tabla. TH columnas. TD filas. Colspan el numero de celdas que quieres que ocupe. Para el numero de filas rowspan -->
+            <th > <b> color </b> </th>
+            <th > <b>precio</b> </th>
+        </tr>
+        <tr>
+            <td rowspan="2">platano</td>
+            <td >amarillo</td>
+            <td >1€</td>
+        </tr>
+        <tr>
+            <td> fresa</td>
+            <td> roja</td>
+            <td>2€</td>
+        </tr>
+      </table>  
+      <img 
+      src="https://via.placeholder.com/150" 
+      alt=""
+      width="150"
+      height="150">
+    <img src="./919827.png" alt="texto alternativo o mas informacion"
+    width="150"
+    height="150">
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi exercitationem veritatis neque sit porro labore iste qui esse repudiandae, consectetur reiciendis animi illum minus adipisci? Placeat eligendi iste soluta quaerat. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam deserunt veniam assumenda tempore quam reprehenderit aliquid nam vero quibusdam! Neque, quod. Rerum ab, vero esse perspiciatis libero fugit fugiat repellat. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum quia iste sequi, doloribus mollitia facere magnam dolorem voluptates non ducimus exercitationem accusantium illo, natus quis praesentium cupiditate officia est culpa! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem vel voluptates eveniet nobis consectetur sapiente voluptate ipsa nesciunt! Cum, at ratione. Magni laborum pariatur ipsum sint quidem quos, dicta fugit?Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim, dicta laborum placeat autem ut eius, nulla maxime ipsa provident quas quos aliquid quaerat debitis reiciendis ea ex quam dolor tenetur! Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae quis eos numquam illum, doloribus quo non sint reprehenderit quasi amet voluptatem autem nobis, dolorem laudantium quos provident ullam labore expedita. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio, recusandae iusto? Repudiandae earum reprehenderit maiores sint sed iusto molestias possimus, laudantium non sunt at numquam provident omnis corporis illo recusandae! Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit necessitatibus sequi maxime est esse et facilis quos repellendus tenetur dolorum ducimus, assumenda odit eaque iste. Tenetur ea dolores saepe impedit sunt laborum accusantium iste obcaecati doloremque necessitatibus veniam excepturi ratione consectetur beatae blanditiis animi libero accusamus, officia error. Ducimus hic officii </p>
+    <img loading ="lazy" src="./919827.png" alt="no carga hasta que no me acerque">
+    <img srcset="./tree-small.jpg 640w, ./tree-mid.jg 1920w ./tree-big.jpg 5650w" 
+    sizes="(max-width:400px) 300 px, (max-width:1200px) 1000px"
+    src="./tree.jpg" alt=" segun el tamaño fotos y usando meta. Como está en el meta en el head. y asi sera un estilo responsive">
     </body>
 </html>
